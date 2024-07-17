@@ -26,14 +26,14 @@ const CompanyList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getAllCompanies")
+      .get("https://easy-ecom-assignment-backend.onrender.com/getAllCompanies")
       .then((res) => setData(res.data))
       .catch((error) => toast.error("error"));
   }, []);
 
   const deleteCompany = (id) => {
     axios
-      .delete(`http://localhost:5000/deleteCompany/${id}`)
+      .delete(`https://easy-ecom-assignment-backend.onrender.com/deleteCompany/${id}`)
       .then(() => {
         setData(data.filter((company) => company._id !== id));
         setShowModal(false);

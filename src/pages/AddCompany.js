@@ -116,7 +116,7 @@ const AddCompany = () => {
     e.preventDefault();
     const finalData = { ...companyData, empInfo: [employeeData] };
     axios
-      .post("http://localhost:5000/addNewCompany", finalData)
+      .post("https://easy-ecom-assignment-backend.onrender.com/addNewCompany", finalData)
       .then((res) => {
         navigate("/");
         toast.success("comapny added successfully");
